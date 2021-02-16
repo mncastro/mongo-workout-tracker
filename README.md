@@ -73,8 +73,16 @@ Or, alternatively, you can use the demo page we deployed on a [Heroku](https://w
 ## Demo
 ​
 The following Gif provides a demonstration of the application's functionalities:
+
 ​
-![Demo](./public/assets/Fitness-Tracker.gif)
+![Demo](./Develop/public/assets/Fitness-Tracker.gif)
+
+![Screenshot 1](./Develop/public/assets/tracker-demo-1.png)
+
+![Screenshot 2](./Develop/public/assets/tracker-demo-2.png)
+
+
+
 ​
 
 ​
