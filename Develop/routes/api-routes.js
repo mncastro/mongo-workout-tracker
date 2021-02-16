@@ -47,6 +47,23 @@ module.exports = function (app) {
             .then((workoutData) => res.json(workoutData))
             .catch((err) => (err));
     });
+
+    app.get("/api/workouts/range", (req, res) => {
+        db.Workout.aggregate([{
+            $addFields: { totalDuration: { $sum: "$exercises.duration" } },
+        },
+        ]).then((workoutData) => {
+            res.json(workoutData);
+        }).catch((err) => {
+            res.status(400).json(err);
+        });
+    });
+
+    // app.post("/api/workouts/range", (req, res) => {
+    //     db.Workout.create({})
+    //         .then((workoutData) => res.json(workoutData))
+    //         .catch((err) => (err));
+    // });
 };
    
 
