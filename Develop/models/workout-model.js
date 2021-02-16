@@ -22,27 +22,27 @@ const fitnessSchema = new Schema({
         duration: {
             type: Number,
             required: true,
-            validate: [({ lenght }) => lenght >= 0, "Duration must be more than 0 minutes"],
+            validate: [({ length }) => length >= 1, "Duration must be more than one minute"],
         },
         distance: {
             type: Number,
             required: true,
-            validate: [({ lenght }) => lenght >= 1, "Distance must be equal or more than 1 mile"],
+            validate: [({ length }) => length >= 1, "Distance must be equal or more than 1 mile"],
         },
         weight: {
             type: Number,
             required: true,
-            validate: [({ lenght }) => lenght >= 1, "Weight must be equal or more than 1 lbs"],
+            validate: [({ length }) => length >= 1, "Weight must be equal or more than 1 lbs"],
         },
         reps: {
             type: Number,
             required: true,
-            validate: [({ lenght }) => lenght >= 0, "You must do at least one rep"],
+            validate: [({ length }) => length >= 0, "You must do at least one rep"],
         },
         sets: {
             type: Number,
             required: true,
-            validate: [({ lenght }) => lenght >= 0, "You must do at least one set"],
+            validate: [({ length }) => length >= 0, "You must do at least one set"],
         },
       },
     ],

@@ -23,10 +23,10 @@ module.exports = function (app) {
     });
 
     app.put("/api/workouts/:id", (req, res) => {
-        const workoutId = req.params.id;
+        const workoutID = req.params.id;
         console.log(workoutID);
 
-        db.Workout.findByIdAndUpdate(workoutId, { $push: { exercises: req.body } })
+        db.Workout.findByIdAndUpdate(workoutID, { $push: { exercises: req.body } })
             .then((dbWorkout) => {
                 res.json(dbWorkout);
             }).catch((err) => {

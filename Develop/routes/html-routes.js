@@ -4,7 +4,7 @@ const root = path.join(__dirname, "../public");
 
 module.exports = function (app) {
     app.get("/exercise", (req, res) => {
-        res.sendFile(root + "/excercise.html");
+        res.sendFile(root + "/exercise.html");
     });
 
     app.get("/stats", (req, res) => {
