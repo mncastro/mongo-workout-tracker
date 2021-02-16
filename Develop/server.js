@@ -17,7 +17,12 @@ require("./routes/html-routes.js")(app);
 //MongoDB and mongoose database connections
 // Server installation and display port
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  });
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}`);
 });
